@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      colors: {
+        blueprint: "#3d6dd7"
+      }
     },
   },
   plugins: [],
