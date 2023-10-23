@@ -1,3 +1,23 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@700,500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Chalkduster;
+  src: url("/Chalkduster.woff2");
+}
+
+@font-face {
+  font-family: "Bradley Hand";
+  src: url("/bradleyhand.woff2");
+}
+
+.sketch-bg {
+  @apply bg-[repeating-linear-gradient(320deg,#eeeb_11px,#eeeb_12px,transparent_10px,transparent_20px)];
+}
+
+.sketch-bg-2 {
+  @apply bg-[repeating-linear-gradient(320deg,#eeeb_11px,#eeeb_12px,transparent_10px,transparent_24px)];
+}

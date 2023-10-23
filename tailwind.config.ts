@@ -6,11 +6,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["Satoshi", "var(--font-sans)", ...fontFamily.sans],
+        chalkduster: ["Chalkduster", ...fontFamily.sans],
+        bradley: ["'Bradley Hand'", ...fontFamily.sans],
+        satoshi: ["Satoshi", ...fontFamily.sans],
       },
       colors: {
-        blueprint: "#3d6dd7"
-      }
+        blueprint: "#3d6dd7",
+      },
     },
   },
   plugins: [],
