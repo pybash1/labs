@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  link: `/${string}`;
+}
+
+const { link, title, description } = Astro.props;
+---
+
+<div class="flex flex-col gap-1">
+  <a
+    href={link}
+    class="underline decoration-1 underline-offset-2 outline-none transition-all duration-500 ease-in-out hover:bg-[#E4E2DD] hover:px-2 hover:py-1 hover:text-[#18181A] focus:bg-[#E4E2DD] focus:px-2 focus:py-1 focus:text-[#18181A]"
+  >
+    {title}
+  </a>
+  <div class="text-sm text-[#E4E2DD]/60">{description}</div>
+</div>

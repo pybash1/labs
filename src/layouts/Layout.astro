@@ -1,0 +1,89 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource/newsreader/500-italic.css";
+import { formatTime } from "../utils";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Experiments & random components from the house of PyBash."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-background text-foreground">
+    <main
+      class="flex min-h-screen flex-col bg-[#18181A] px-8 py-2 text-[#E4E2DD]"
+    >
+      <div class="flex items-center justify-between">
+        <a href="/" class="group -mx-6 flex items-center outline-none">
+          <img
+            src="/p-transparent.png"
+            width={256}
+            height={256}
+            alt="logo"
+            class="h-16 w-16"
+          />
+          <span
+            class="overflow-hidden opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+          >
+            pybash
+          </span>
+        </a>
+        <nav
+          class="flex items-center gap-2 text-sm text-[#E4E2DD]/90 underline decoration-[#E4E2DD]/90 underline-offset-[3px]"
+        >
+          <a
+            class="outline-none transition duration-300 ease-in-out hover:text-[#E4E2DD] hover:decoration-[#E4E2DD] focus:text-[#E4E2DD] focus:decoration-[#E4E2DD]"
+            href="https://twitter.com/py_bash1"
+            target="_blank"
+          >
+            Tweetybird
+          </a>
+          <a
+            class="outline-none transition duration-300 ease-in-out hover:text-[#E4E2DD] hover:decoration-[#E4E2DD] focus:text-[#E4E2DD] focus:decoration-[#E4E2DD]"
+            href="https://github.com/pybash1"
+            target="_blank"
+          >
+            Octocat
+          </a>
+          <a
+            class="outline-none transition duration-300 ease-in-out hover:text-[#E4E2DD] hover:decoration-[#E4E2DD] focus:text-[#E4E2DD] focus:decoration-[#E4E2DD]"
+            href="mailto:hi@pybash.xyz"
+            target="_blank"
+          >
+            hi@pybash.xyz
+          </a>
+        </nav>
+      </div>
+      <slot />
+      <footer
+        class="-mx-8 flex items-center justify-between border-t border-[#313136] px-4 pt-2 text-sm text-[#E4E2DD]/50 md:px-24 lg:px-72"
+      >
+        <div>Keep building.</div>
+        <div>{formatTime(new Date())}</div>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Matter";
+    src: url("/fonts/Matter-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

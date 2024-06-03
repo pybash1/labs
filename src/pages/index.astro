@@ -1,0 +1,44 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Wizardry - PyBash">
+  <div class="flex grow flex-col gap-6 pb-8 pt-36 md:px-36 lg:px-96">
+    <div class="text-xl text-[#E4E2DD]/60 font-serif">Wizardry</div>
+    <div>
+      Welcome to my wizarding world, where I spend time, perfecting details, and
+      building absurd components, or design the future.
+    </div>
+    <div>
+      If you're unfamiliar with me, you'd like to visit <a
+        href="https://pybash.xyz"
+        class="underline decoration-1 underline-offset-2 outline-none transition-all duration-500 ease-in-out hover:bg-[#E4E2DD] hover:px-2 hover:py-1 hover:text-[#18181A] focus:bg-[#E4E2DD] focus:px-2 focus:py-1 focus:text-[#18181A] font-serif"
+        >my home on the internet</a
+      >. Or perhaps, my tiny little writing corner, known as <a
+        href="https://parchments.pybash.xyz"
+        class="underline decoration-1 underline-offset-2 outline-none transition-all duration-500 ease-in-out hover:bg-[#E4E2DD] hover:px-2 hover:py-1 hover:text-[#18181A] focus:bg-[#E4E2DD] focus:px-2 focus:py-1 focus:text-[#18181A] font-serif"
+      >
+        Parchments</a
+      >.
+    </div>
+    <div>
+      My portfolio, is written in NextJS. As for this site, it is built with <a
+        href="https://astro.build"
+        class="underline decoration-1 underline-offset-2 outline-none transition-all duration-500 ease-in-out hover:bg-[#E4E2DD] hover:px-2 hover:py-1 hover:text-[#18181A] focus:bg-[#E4E2DD] focus:px-2 focus:py-1 focus:text-[#18181A] font-serif"
+      >
+        Astro</a
+      >, though, the components showcased here, are almost always built with
+      React. The code for the components showcased here, as well as the site
+      itself, and my primary site, are all open source, and on GitHub.
+    </div>
+    <div class="text-xl text-[#E4E2DD]/60 font-serif">Experiments</div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <ProjectCard
+        title="Linear Tooltips"
+        description="Recreated the linear tooltip design, with the time delay."
+        link="/linear-tooltips"
+      />
+    </div>
+  </div>
+</Layout>

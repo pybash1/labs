@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/ExperimentLayout.astro";
+import LinearTooltipsComponent from "../components/experiments/LinearTooltips";
+---
+
+<Layout name="Linear Delayed Tooltips" date="June 2024">
+  <div slot="before">
+    Linear does tooltips a little differently than others. The first time, you
+    have to hover over the items for a distinct time period for the tooltip to
+    appear, but thereon, it appears instantly. It, then again resets when you
+    hover away from it.
+  </div>
+  <div class="flex justify-center w-full">
+    <LinearTooltipsComponent client:load />
+  </div>
+  <div slot="after">
+    This reimplementation focuses on the tooltips, rather than the rest of the
+    UI. The font, and hover effect of the "Workspace" text is incorrect. The
+    rest of the UI resembles the origin Linear interface as closely as possible.
+  </div>
+</Layout>
