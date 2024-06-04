@@ -1,0 +1,44 @@
+---
+import Stamp from "../components/experiments/Stamp";
+import Layout from "../layouts/ExperimentLayout.astro";
+---
+
+<Layout name="Postage Stamps" date="June 2024">
+  <div slot="before">
+    Building custom borders in never fun to say the least, but sometimes, the
+    results can be pretty cool, just like this one!
+  </div>
+  <div class="relative flex justify-center w-full gap-2 py-2">
+    <div class="-rotate-[20deg] z-20">
+      <Stamp image="/assets/stamp1.jpg" client:load />
+    </div>
+    <div class="rotate-[10deg] -translate-x-8 z-30">
+      <Stamp image="/assets/stamp2.jpg" client:load />
+    </div>
+    <div class="absolute left-[30%] bottom-0 z-10 flex flex-col">
+      <div
+        class="underline decoration-wavy decoration-foreground/80 decoration-[2px]"
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div
+        class="pl-0.5 underline decoration-wavy decoration-foreground/70 decoration-[2px] -mt-1.5"
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div
+        class="pl-1 underline decoration-wavy decoration-foreground/75 decoration-[2px] -mt-2"
+      >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div slot="after">
+    This one was a bit tricky to achieve as, putting a solid color for the
+    repeating dots, doesn't give the perfect result if the background isnt the
+    same color or the background is a gradient or an image.
+  </div>
+</Layout>
