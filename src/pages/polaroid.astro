@@ -1,0 +1,49 @@
+---
+import PolaroidImage from "../components/experiments/Polaroid";
+import Layout from "../layouts/ExperimentLayout.astro";
+---
+
+<Layout name="Polaroid-ish images" date="July 2024">
+  <div slot="before">
+    Old-school polaroid style photo gallery designed by Zsolt Kálmán. Although
+    quite simple, it was fun to make!
+  </div>
+  <div class="relative flex justify-center w-full gap-2 py-2">
+    <div class="-rotate-[10deg] z-20">
+      <PolaroidImage
+        image="/assets/polaroid1.png"
+        title="Paris '23"
+        client:load
+      />
+    </div>
+    <div class="rotate-[10deg] -translate-x-8 z-30">
+      <PolaroidImage image="/assets/polaroid2.jpeg" title="" client:load />
+    </div>
+    <div class="-rotate-[10deg] -translate-x-16 z-30">
+      <PolaroidImage
+        image="/assets/polaroid3.webp"
+        title="India trip"
+        client:load
+      />
+    </div>
+    <div class="rotate-[15deg] -translate-x-24 z-30">
+      <PolaroidImage
+        image="/assets/polaroid4.jpg"
+        title="Canada Offsite"
+        client:load
+      />
+    </div>
+  </div>
+  <div slot="after">
+    Nothing to say about this really, only the bottom text was a bit tricky to
+    center vertically. But that's about it. And getting the perfect aspect ratio
+    was also not particularly easy, had to eyeball it at the end.
+  </div>
+  <a
+    href="https://x.com/ui_zsolt/status/1819765341628551506"
+    slot="after"
+    class="underline decoration-1 underline-offset-2 outline-none transition-all duration-500 ease-in-out hover:bg-[#E4E2DD] hover:px-2 hover:py-1 hover:text-[#18181A] focus:bg-[#E4E2DD] focus:px-2 focus:py-1 focus:text-[#18181A]"
+  >
+    Original concept
+  </a>
+</Layout>

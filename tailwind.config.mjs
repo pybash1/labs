@@ -12,6 +12,13 @@ export default {
       fontFamily: {
         sans: ["Matter", ...defaultTheme.fontFamily.sans],
         serif: ["Newsreader", ...defaultTheme.fontFamily.serif],
+        caveat: [
+          "Caveat",
+          "cursive",
+          "Newsreader",
+          "Matter",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
     },
   },
